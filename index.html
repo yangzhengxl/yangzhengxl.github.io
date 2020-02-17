@@ -172,40 +172,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-
-<p>一、伪元素选择器</p>
-<p>1、一个元素只有前后两个伪元素  </p>
-<p>​         ::after和::before</p>
-<p>2、::first-letter   对该元素的第一个字进行设置</p>
-<p>3、::first-line      对该元素的第一行的字进行设置</p>
-<p>4、::selection     匹配元素中被用户选中或处于高亮状态的部分。只可以应用于少数的CSS属性：color, background, cursor,和outline。</p>
-<p>5、:root   匹配文档树的根元素，用于声明全局CSS变量</p>
-<p>二、声明的优先级</p>
-<p>​        1、选择器的特殊性,   如果时同一类元素，哪个在下表现为哪个</p>
-<p>​              内联声明 &gt; ID &gt; 类、属性选择器、伪类选择器 &gt; 选择器中给定的各个元素和子元素 &gt; 通配符</p>
-<p>​        2、重要声明</p>
-<p>​                 有时某个声明比较重要，超过了所有其他声明，称之为重要声明。</p>
-<p>​                 并允许在这些声明的结束分号之间插入！important来标志必须准确放置！important</p>
-<p>​                 否则声明无效</p>
-<p>​         3、继承</p>
-<p>​               继承没有特殊性，甚至连0特殊性都没有</p>
-<p>​               0特殊性要比无特殊性来的强</p>
-<p>​          4、来源：</p>
-<p>​                          创作人员</p>
-<p>​                          读者</p>
-<p>​                          用户代理</p>
-<p>​                  权重：</p>
-<p>​                            读者的重要声明</p>
-<p>​                            创作人员的重要声明</p>
-<p>​                             创作人员的正常声明</p>
-<p>​                            读者的正常声明</p>
-<p>​                            用户代理的声明（浏览器）</p>
-<p>​          5、层叠：</p>
-<p>​                       1、找出所有相关规则</p>
-<p>​                        2、计算声明优先级</p>
-<p>​                                    1来源      2 选择器特殊性   3 按顺序</p>
-
+        <p>​</p>
+        
       
 
       
@@ -267,85 +235,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-
-<p>css3导学</p>
-<p>一、css3导学</p>
-<p>  CSS：cascading style sheets </p>
-<p>   结构关系：1、样式表=n*规则</p>
-<p>​                       2、规则=选择器+声明块</p>
-<p>​                        3、声明块=n*声明</p>
-<p>​                       4、声明=css属性+css属性值组成的键值对</p>
-<p>​    浏览器渲染选择器的顺序是从右往左</p>
-<p>二、基本选择器</p>
-<p>​     CSS选择器规范地址：     <a href="https://www.w3.org/TR/2011/REC-css3-selectors-20110929/" target="_blank" rel="noopener">https://www.w3.org/TR/2011/REC-css3-selectors-20110929/</a></p>
-<p>​    CSS3选择器最新选择器规范：<a href="https://ww.w3.org/TR/selectors" target="_blank" rel="noopener">https://ww.w3.org/TR/selectors</a>   </p>
-<p>  1、通配符选择器  *{}</p>
-<p><img src="/2020/02/15/huhu/image-20200215214355085.png" alt="image-20200215214355085"></p>
-<p>​     2、id选择器           #{}</p>
-<p>​     3、类选择器            .{}</p>
-<p>​     4、元素选择器         元素名（a{}  p{}   h1{}）</p>
-<p>​     5、 后代选择器        空格（  div a{}  块元素中的子元素a的样式   ）</p>
-<p>​     6、分组选择器             ，   （结合符   ）</p>
-<p>​     7、子元素选择器       &gt;    选中指定父元素的指定子元素（只到子不到孙）</p>
-<p>​     8、相邻兄弟选择器     a+ b{} (只给下一个相邻的兄弟b，紧跟)</p>
-<p>​     9、通用选择器              a ~b{}（只要后面是兄弟都通用）</p>
-<p>三、属性选择器</p>
-<p>​     1、（1）存在和值属性选择器</p>
-<p>​                     1、[ attr]:该选择器选择包含attr属性的所有元素，无论attr为何值</p>
-<p>​                      2、[attr=val] :该选择器仅选择attr属性被赋值为val的所有元素</p>
-<p>​                      3、[attr~=val]:表示带有以attr命名的属性的元素，并且该元素是一个以空格作为分隔的值列表</p>
-<p>​            （2）子串值属性选择器</p>
-<p>​                                1 [attr|=val]: 选择attr属性的值以val（包括val）或val-开头的元素</p>
-<p>​                                [attr^=val] :选择attr属性的值以val开头（包括val）的元素</p>
-<p>​                                [attr$=val] :选择attr属性的值以val结尾（包括val）的元素</p>
-<p>​                                [attr*=val] :选择attr属性的值中包含字符串val的元素</p>
-<pre><code>2、伪类选择器
-        伪类专门用来表示元素的一种特殊状态，
-        比如：访问过的超链接，比如普通的超链接，比如获取焦点的本能框
-        当我们需要位处在这些特殊状态的元素设置样式时，就可以使用伪类。
-        为没访问过的连接设置一个颜色为绿色
-    /链接伪类/
-    ：link
-        -表示普通的链接（没访问过的链接）
-    :visited
-         -表示访问过的链接
-         -浏览器是通过历史记录来判断一个链接是否访问过，
-         由于涉及到用户隐私问题，所以使用visited伪类只能设置字体颜色
-    :target   
-        -表示一个特殊元素。锚的名称是在一个文件中链接到某个元素的URL。元素被链接到目标元素。
-    /动态伪类/
-    :hover
-         -表示鼠标移入的状态
-    :active
-         -表示的时超链接点击的状态
-        hover不能写在active下，link，visited，hover，active顺序就是这样不可变
-    /表单伪类/
-    :enabled  
-         -匹配可编辑的表单
-    :disabled
-         -匹配禁用的表单
-    :checked
-         -匹配被选中的表单
-    :focus
-        -匹配获焦的表单</code></pre><p>target伪类使用样例：此时点击apple会出现apple的div块</p>
-<p><img src="/2020/02/15/huhu/image-20200216141925277.png" alt="image-20200216141925277"></p>
-<p><img src="/2020/02/15/huhu/image-20200216142018955.png" alt="image-20200216142018955"></p>
-<p>:enabled   :disabled  :checked  :focus四种伪类样例</p>
-<p><img src="/2020/02/15/huhu/image-20200216164511067.png" alt="image-20200216164511067"></p>
-<p>自定义单选按钮  /input type=“radio”/</p>
-<p>style标签中写以下内容</p>
-<p><img src="/2020/02/15/huhu/image-20200216202159260.png" alt="image-20200216202159260"></p>
-<p>body标签中写以下内容</p>
-<p><img src="/2020/02/15/huhu/image-20200216202227988.png" alt="image-20200216202227988"></p>
-<p><img src="/2020/02/15/huhu/image-20200216203434756.png" alt="image-20200216203434756"></p>
-<p>注意：（1）每个input按钮标签中的name都要一样，这样选择时才会按哪个选哪个，并且只会有单个按钮被选中，不会出现多选的现象</p>
-<p>​            （2）label标签是内联元素，要将元素设置浮动，才能设置宽和高。</p>
-<p>​            （3）父元素设置相对定位，子元素设置绝对定位  </p>
-<p>​            （4）input向上向左移动移出边框，并且父元素label设置了overflow:hidden（内容会被修剪，并且其余内容是不可见的）。</p>
-<p>​            （5） label&gt;span指的是选择label的子元素span。span中上下左右都是0px，指的是与父元素的距离是0px，即一个span占满了整个label。</p>
-<p>​            （6）使用相邻兄弟选择器     a+ b{} (只给下一个相邻的兄弟b，紧跟)，因此只会出现被选中的input的兄弟span的背景颜色</p>
-
+        <p>​</p>
+        
       
 
       
@@ -407,23 +298,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-
-<p>CSS_结构性伪类</p>
-<p>一、:nth-child(index)   从1开始 1~n  odd(奇数)  even(偶数)</p>
-<p>​                    ——#warp ele:nth-child(index) </p>
-<p>​                    ——表示匹配#warp中第index的子元素，这个子元素必须是第index个，这个子元素必须是ele</p>
-<p>​       :first-child    是第一个儿子 ，并且是指定元素；如果不是指定元素在第一个则无效。</p>
-<p>​       :last-child      该元素必须是最后一个儿子，并且是指定的元素</p>
-<p>​       :nth-last-child(index)    倒数 从最后一个儿子开始</p>
-<p>​       :only-child   该元素只能有一个子元素并且是指定元素</p>
-<p>二、:nth-of-type(index)  从1开始 1~n  odd(奇数)  even(偶数)</p>
-<p>​                       ——#warp ele:nth-of-type(index)</p>
-<p>​                       ——表示匹配#warp中第index的ele元素</p>
-<p>​       :nth-first-of-type      该元素指定的子元素的第一个，不一定是所有子元素中的第一个</p>
-<p>​       :nth-last-of-type       该元素指定的子元素的倒数一个，不一定是所有子元素中的最后一个</p>
-<p>​       :only-of-type            该元素可以有不同子元素，但是指定的子元素只能由一个</p>
-
+        <p>​</p>
+        
       
 
       
