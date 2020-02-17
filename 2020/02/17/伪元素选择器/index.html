@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客文章  | Hexo</title>
+  <title>伪元素选择器&amp;CSS声明的优先级 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客文章 ">
-<meta property="og:url" content="http://yoursite.com/2020/02/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
+  <meta name="description" content="一、伪元素选择器 1、一个元素只有前后两个伪元素   ​         ::after和::before 2、::first-letter   对该元素的第一个字进行设置 3、::first-line      对该元素的第一行的字进行设置 4、::selection     匹配元素中被用户选中或处于高亮状态的部分。只可以应用于少数的CSS属性：color, background, cur">
+<meta property="og:type" content="article">
+<meta property="og:title" content="伪元素选择器&amp;CSS声明的优先级">
+<meta property="og:url" content="http://yoursite.com/2020/02/17/%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、伪元素选择器 1、一个元素只有前后两个伪元素   ​         ::after和::before 2、::first-letter   对该元素的第一个字进行设置 3、::first-line      对该元素的第一行的字进行设置 4、::selection     匹配元素中被用户选中或处于高亮状态的部分。只可以应用于少数的CSS属性：color, background, cur">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-14T11:21:02.000Z">
-<meta property="article:modified_time" content="2020-02-14T11:21:02.682Z">
+<meta property="article:published_time" content="2020-02-17T12:38:28.000Z">
+<meta property="article:modified_time" content="2020-02-17T15:10:59.308Z">
 <meta property="article:author" content="一夜暴富">
 <meta name="twitter:card" content="summary">
   
@@ -152,27 +154,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-伪元素选择器" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客文章 
+      伪元素选择器&amp;CSS声明的优先级
     </h1>
   
 
         
-        <a href="/2020/02/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-02-14T11:21:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-14</time>
+        <a href="/2020/02/17/%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-02-17T12:38:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <a id="more"></a>
+
+<p>一、伪元素选择器</p>
+<p>1、一个元素只有前后两个伪元素  </p>
+<p>​         ::after和::before</p>
+<p>2、::first-letter   对该元素的第一个字进行设置</p>
+<p>3、::first-line      对该元素的第一行的字进行设置</p>
+<p>4、::selection     匹配元素中被用户选中或处于高亮状态的部分。只可以应用于少数的CSS属性：color, background, cursor,和outline。</p>
+<p>5、:root   匹配文档树的根元素，用于声明全局CSS变量</p>
+<p>二、声明的优先级</p>
+<p>​        1、选择器的特殊性,   如果时同一类元素，哪个在下表现为哪个</p>
+<p>​              内联声明 &gt; ID &gt; 类、属性选择器、伪类选择器 &gt; 选择器中给定的各个元素和子元素 &gt; 通配符</p>
+<p>​        2、重要声明</p>
+<p>​                 有时某个声明比较重要，超过了所有其他声明，称之为重要声明。</p>
+<p>​                 并允许在这些声明的结束分号之间插入！important来标志必须准确放置！important</p>
+<p>​                 否则声明无效</p>
+<p>​         3、继承</p>
+<p>​               继承没有特殊性，甚至连0特殊性都没有</p>
+<p>​               0特殊性要比无特殊性来的强</p>
+<p>​          4、来源：</p>
+<p>​                          创作人员</p>
+<p>​                          读者</p>
+<p>​                          用户代理</p>
+<p>​                  权重：</p>
+<p>​                            读者的重要声明</p>
+<p>​                            创作人员的重要声明</p>
+<p>​                             创作人员的正常声明</p>
+<p>​                            读者的正常声明</p>
+<p>​                            用户代理的声明（浏览器）</p>
+<p>​          5、层叠：</p>
+<p>​                       1、找出所有相关规则</p>
+<p>​                        2、计算声明优先级</p>
+<p>​                                    1来源      2 选择器特殊性   3 按顺序</p>
+
       
 
       
@@ -251,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/17/%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/15/CSS3_%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%AA%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          结构性伪类
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/02/15/huhu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Css3</div>
       <i class="icon-circle-right"></i>
     </a>
   
