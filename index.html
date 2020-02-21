@@ -152,6 +152,233 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-新UI-新增UI样式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/">新UI-新增UI样式</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-02-19T12:32:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+           <a id="more"></a>
+
+<p>  一、圆角</p>
+<p>​     border-radius: px;</p>
+<p>​           —边框为正方型时，使半径为边长的一半就会出现圆</p>
+<p>​          — border-radius: px px px px;  左上   右上   右下    左下</p>
+<p>​          — border-radius: px/ px;  椭圆 ，长方形时设置px/px则会生成椭圆</p>
+<p>​          —-也可以用   %，正方形50%则是圆，长方形50%则是椭圆</p>
+<p> 制作一个简易动态风车主要代码</p>
+<p>style</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>,<span class="selector-tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125; <span class="comment">/*禁止形成滚动条*/</span></span><br><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line"><span class="comment">/*	border: 1px solid;*/</span></span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">	<span class="attribute">right</span>: <span class="number">0px</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">	<span class="attribute">bottom</span>: <span class="number">0px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: auto;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">10s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box1</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">	<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">120deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bb1</span>,<span class="selector-class">.bb2</span>,<span class="selector-class">.bb3</span>,<span class="selector-class">.bb4</span></span><br><span class="line"><span class="comment">/*.box1 &gt; div*/</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">210px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">210px</span>;</span><br><span class="line">	<span class="attribute">box-shadow</span>: <span class="number">2px</span> <span class="number">2px</span> <span class="number">10px</span> <span class="number">1px</span> blue ;</span><br><span class="line">	<span class="attribute">background-color</span>: skyblue;</span><br><span class="line">	<span class="attribute">float</span>: left;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bb1</span>,<span class="selector-class">.bb4</span>&#123;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">60%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bb2</span>,<span class="selector-class">.bb3</span>&#123;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">60%</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>body    </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box1"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bb1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bb2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bb3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bb4"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/image-20200219215950315.png" alt="image-20200219215950315"></p>
+<p>简单对话框制作</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.div</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">60px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">	<span class="attribute">font</span>: <span class="number">40px</span>/<span class="number">300px</span> <span class="string">"华文彩云"</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">right</span>:-<span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">bottom</span>: -<span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">right</span>:-<span class="number">70px</span>;</span><br><span class="line">	<span class="attribute">bottom</span>: -<span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>二、边框图片</p>
+<p> border-image-source：</p>
+<p>​                  —-属性规定要使用的图像，代替 border-style 属性中设置的边框样式。用在边框的图片的路径。</p>
+<p>border-image-slice</p>
+<p>​                   —-图片边框向内偏移。</p>
+<p>border-image-width</p>
+<p>​                  —-图片边框的宽度。</p>
+<p>border-image-outset</p>
+<p>​               —-边框图像区域超出边框的量。</p>
+<p>border-image-repeat</p>
+<p>​             —-图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。</p>
+<p>三、css_背景</p>
+<p><img src="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/image-20200220103646412.png" alt="image-20200220103646412"></p>
+<p>四、渐变</p>
+<p>​      1、线性渐变</p>
+<p>​      </p>
+<p>​      默认从上到下发生渐变，可以有多个颜色.可以在颜色的后面加上像素，当两个像素相等时就会出现块</p>
+<p>​              —-background-image: linear-gradient(grey,black,grey);</p>
+<p>​      改变渐变方向:(top bottom left right)</p>
+<p>​             —-background-image: linear-gradient(to left,grey,black,grey);</p>
+<p>​    使用角度</p>
+<p>​            —–background-image: linear-gradient(t45deg,grey,black,grey);</p>
+<p><img src="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/image-20200220192738979.png" alt="image-20200220192738979"></p>
+<p>​    重复渐变</p>
+<p>​         ——background-image: repeating-linear-gradient(90deg,rgba(0,0,0,0) 100px,black 200px );</p>
+<p><img src="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/image-20200220194040801.png" alt="image-20200220194040801"></p>
+<p>要有渐变才能重复，如果要纯色相隔变色，就需要将颜色写范围</p>
+<p>如black 0px，black 10px,white 10px，white 20px,表示黑从0-10px,白10-20px</p>
+<p>样例：</p>
+<p>（1）发廊灯</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body{
+            overflow: hidden;
+        }
+        #qi{
+            width: 500px;
+            height: 150px;
+            border: 1px solid;
+            overflow: hidden;
+            margin:100px auto;        
+        }
+        #hua{
+            transition: 2s;
+            width: 800px;
+            height: 150px;
+            /*background: red;*/
+            background-image:repeating-linear-gradient(45deg,black 0px,black 30px,white 30px,white 60px);
+        }
+        #hua:hover {
+            margin-left:-300px; 
+        }
+    </style>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div id="qi">
+        <div id="hua"></div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body{
+            overflow: hidden;
+        }
+        #qi{
+            width: 500px;
+            height: 150px;
+            border: 1px solid;
+            overflow: hidden;
+            margin:100px auto;        
+        }
+        #hua{
+            transition: 2s;
+            width: 800px;
+            height: 150px;
+            /*background: red;*/
+            background-image:repeating-linear-gradient(45deg,black 0px,black 30px,white 30px,white 60px);
+        }
+        #hua:hover {
+            margin-left:-300px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="qi">
+        <div id="hua"></div>
+    </div>
+</body>
+</html>
+
+<p><img src="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/image-20200220210909304.png" alt="image-20200220210909304"></p>
+<p>如果想要使图片能够变成自动的动画而不是人手触碰到后才移动，可以利用JavaScript</p>
+<script type="text/javascript">
+    var hua = document.querySelector("#hua");
+    var flag = 0;
+    setInterval(function(){
+        flag++;
+        if (flag==300) {
+            flag=0;
+        }
+            hua.style.marginLeft = -flag+"px";
+    },1000/50)
+</script>
+
+<p>（2）光斑动画</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">	*&#123;</span><br><span class="line">		margin: 0px;</span><br><span class="line">		padding: 0px;</span><br><span class="line">	&#125;</span><br><span class="line">	html,body&#123;</span><br><span class="line">		height: 100%;</span><br><span class="line">		overflow: hidden;</span><br><span class="line">		background: black;</span><br><span class="line">		text-align: center;</span><br><span class="line">	&#125;</span><br><span class="line">	h1&#123;</span><br><span class="line"><span class="css">	<span class="comment">/*	transition: 3s;*/</span></span></span><br><span class="line">		display: inline-block;</span><br><span class="line">		font: bold 80px/200px  "宋体";</span><br><span class="line"><span class="css">		<span class="selector-tag">color</span>: <span class="selector-tag">rgba</span>(255,255,255,<span class="selector-class">.5</span>);</span></span><br><span class="line"><span class="css">		 <span class="comment">/*text-align: center;这是文字居中，不是整个元素居中*/</span></span></span><br><span class="line">		background-image: linear-gradient(130deg,rgba(255,255,255,0) 100px,white 120px,rgba(255,255,255,0) 200px);</span><br><span class="line"><span class="css">		<span class="comment">/*此处要设置第一个透明的长度，否则无法看见逛光斑从中间移动*/</span></span></span><br><span class="line">		background-repeat: no-repeat;</span><br><span class="line">		-webkit-background-clip: text;</span><br><span class="line">	&#125;</span><br><span class="line">/*	h1:hover&#123;</span><br><span class="line">		background-position: 800px;</span><br><span class="line">	&#125;</span><br><span class="line">	*/</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<body>
+    <h1>aAc这里是南二722</h1>
+</body>
+
+<script type="text/javascript">
+    var h1 = document.querySelector("h1");
+    var flag = -80;//设置为-80是光斑的长度 
+    setInterval(function(){
+        flag++;
+    if (flag==700){
+        flag=-80;
+    }
+    h1.style.backgroundPosition = flag +"px"
+    },2)
+</script>
+
+<p>2、镜像渐变</p>
+<p>  background-image:radial-gradient( , )</p>
+<p> —–默认均匀分布，按对角线到中点来分，可以多种颜色，最开始的在中间</p>
+<p>—–可以自己指定颜色</p>
+<p>——如果默认是个椭圆，想要变成圆可以 background-image:radial-gradient(circle ,     ,    )</p>
+<p>——-在circle后面空格写 at    px   px  设置圆心距离，半径默认是与最远角距离有关</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-新UI-盒模型新增样式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
