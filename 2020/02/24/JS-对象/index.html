@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/2 | Hexo</title>
+  <title>JS_对象 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+  <meta name="description" content="​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS_对象">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="​">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225195913302.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225002738690.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225003140094.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225003512689.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225192830953.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200226000238642.png">
+<meta property="article:published_time" content="2020-02-24T15:28:01.000Z">
+<meta property="article:modified_time" content="2020-02-25T16:15:38.331Z">
 <meta property="article:author" content="一夜暴富">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225195913302.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,295 +161,338 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JS-对象" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/26/JS-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2020-02-25T16:16:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/26/JS-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">JS_创建对象</a>
+    <h1 class="article-title" itemprop="name">
+      JS_对象
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+        
+        <a href="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
   	<time datetime="2020-02-24T15:28:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/">JS_对象</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​      <a id="more"></a></p>
+<p><strong>Js_对象</strong></p>
+<p>  <em>一、对象</em></p>
+<p>对象属于一种符合的数据类型，在对象中可以保存多个不同数据类型的属性</p>
+<p>​      对象分类：</p>
+<p>​            1、内建对象</p>
+<p>​                      -由ES标准中定义的对象，在任何的ES的实现中都可以使用</p>
+<p>​                      -比如：Math String Number Boolean Function object…</p>
+<p>​            2、宿主对象</p>
+<p>​                      -由JS的运行环境提供的对象，目前来讲主要是指由浏览器提供的对象</p>
+<p>​                     -比如 BOM DOM</p>
+<p>​            3、自定义对象</p>
+<p>​                         -由开发人员自己创建的对象</p>
+<p> （1）创建对象</p>
+<p>​          //new是构造函数，专门用来构造对象的函数</p>
+<p>​             var obj = new Object();</p>
+<p> （2）向对象中添加属性</p>
+<p>​         //在对象中保存的值称为属性</p>
+<p>​              向对象添加属性</p>
+<p>​                   语法：对象 . 属性名 = 属性值;</p>
+<p>​             例：//向obj中添加一个name属性</p>
+<p>​                   obj.name = “小葫芦”   ;</p>
+<p>   (3) 读取对象属性</p>
+<p>​             语法：对象 . 属性;</p>
+<p>​        如：obj.name</p>
+<p>​      —-如果读取对象中没有的属性，不会报错，而是会返回undifined</p>
+<p>（4）修改对象的属性值</p>
+<p>​        语法：对象 . 属性名 = 新值;</p>
+<p>（5） 删除对象的属性</p>
+<p>​            语法：delete 对象 . 属性名</p>
+<p>​          如：delete obj.name;</p>
+<p>函数也可以是对象的属性</p>
+<p>如果一个函数作为一个对象的属性保存</p>
+<p>那我们称这个函数时，这个对象的方法</p>
+<p>调用函数就说调用对象的方法（method）</p>
+<p>但是它只是名称上的区别没有其他的区别</p>
+<p> //调用方法</p>
+<p> obj.sayName()；</p>
+<p>调用obj的sayName方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  name:<span class="string">"花花"</span>,</span><br><span class="line">  age : <span class="number">18</span>,</span><br><span class="line">  gender:<span class="string">"男"</span>,</span><br><span class="line">  address:<span class="string">"花果山"</span>,</span><br><span class="line">  sayName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;; </span><br><span class="line">obj.sayName();</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
 
+<p><img src="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225195913302.png" alt="image-20200225195913302"></p>
+<p>//调用函数</p>
+<p>fun()；</p>
+<p><em>二、属性名和属性值</em></p>
+<p>​      属性名：</p>
+<p>​            -对象的属性名不强制要求遵守标识符的规范，但是尽量按标识符规范</p>
+<p>​           -如果要使用特殊的属性名，不能采用  .  的方式操作</p>
+<p>​                需要使用另一种方式：</p>
+<p>​                        语法：对象[“属性名”] = 属性值;</p>
+<p>​                  读取时也要使用这种方式</p>
+<p>​                      用【】更灵活</p>
+<p>​    属性值：</p>
+<p>​          可以是任意的数据类型，甚至也可以是一个对象</p>
+<p>​     in 运算符</p>
+<p>​          -通过该运算可以检查一个对象中是否含有指定的属性</p>
+<p>​                         如果有，则返会true，没有则返回false</p>
+<p>​               语法： “属性名”  in  对象</p>
+<p>三、基本和引用数据类型</p>
+<p>​        JS中的标量都存在栈内存中</p>
+<p>​                  基本数据类型的值直接在栈的内存中存储</p>
+<p>​                   值与值之间是独立存在的，修改一个变量的值，不会影响其他变量</p>
+<p>​            </p>
+<p>​              对象是保存在堆内存中的，没创建一个新的对象，就会在堆内存中开辟一个新的空间，而变量保存的是对象的内存地址（对象的引用），如果两个变量保存的是同一个对象的引用，当一个修改属性时，另一个也会随之改变</p>
+<p><img src="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225002738690.png" alt="image-20200225002738690"></p>
+<p><img src="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225003140094.png" alt="image-20200225003140094"></p>
+<p>这样不会产生影响</p>
+<p>当比较两个基本数据类型时，就是比较值</p>
+<p>表示两个引用数据时，是表示两个内存地址</p>
+<p><img src="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225003512689.png" alt="image-20200225003512689"></p>
+<p>四、对象字面量</p>
+<p>​       //使用对象字面量创建一个对象</p>
+<p> 如：  <strong>obj = {};</strong></p>
+<p>​     //使用对象字面量，可以在创建对象时，直接指定对象的属性</p>
+<p>  语法：{属性名：属性值，属性名：属性值，…..}</p>
+<p>   属性名和属性值之间用冒号链接，多个名值对之间使用 “，”隔开</p>
+<p>如：    obj2= {name:”猪八戒”，</p>
+<p>​                         age:18</p>
+<p>​                           gender:”男”}; </p>
+<p>五、函数</p>
+<p>​        -函数也是对象</p>
+<p>​       -函数中可以封装一些功能（代码），在需要时可以执行这些功能(代码)</p>
+<p>​      -使用typeof检查一个函数对象时，回返回function</p>
+<p>（1）使用函数声明来创建一个函数</p>
+<p>​     语法：</p>
+<p>​              function 函数名（【形参1，形参2，……形参N】){</p>
+<p>​                      语句…</p>
+<p>​               }</p>
+<p>（2）使用函数表达式来创建一个函数</p>
+<p>​       var 函数名 = function （[形参1，形参2，……形参N]）{</p>
+<p>​                      语句…</p>
+<p>​               } ；</p>
+<p>​           此时的function是一个匿名函数，创建一个匿名函数，将匿名函数赋值给一个变量</p>
+<p>  <code>函数参数</code></p>
+<p>​         可以在函数括号中指定一个或多个形式参数</p>
+<p>​        —多个形参之间使用，隔开。声明形参时相当于在函数内部声明了对应的变量</p>
+<p>​       —并不赋值</p>
+<p>​       在调用函数时，可以在（）中指定实参（实际参数）</p>
+<p>​    实参将会赋值给函数中对应的形参，</p>
+<p>​      调用函数时解析器不会检查实参的类型，</p>
+<p>​       所以要注意，是否有可能回接收到非法的参数，如果有可能则需要对参数进行类型的检查。函数的实参可以是任意的数据类型。</p>
+<p>​       调用函数时，解析器也不会检查实参的数量，多余的实参不会被赋值。如果实参的数量少于形参的数量，则没有对应实参的形参将是undefined</p>
+<p>  六、返回值（return）</p>
+<p>使用return来设置函数的返回值</p>
+<p>​      语法：</p>
+<p>​               return  值；</p>
+<p>​    return 后的值将会作为函数的执行结果返回</p>
+<p>​      可以定义一个变量，来接收该结果</p>
+<p>–如果return语句后不跟任何值就相当于返回一个undefined</p>
+<p>–如果函数中不写return，则也会返回undefined</p>
+<p> return后可以跟任意类型的值</p>
+<p> — return也可以返回对象，也可以是函数</p>
+<p>七、实参</p>
+<p>​         实参可以是任意的数据类型，也可以是一个对象，也可以是函数</p>
+<p>  当我们的参数过多时，可以将参数封装到一个对象，通过对象传递</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">console</span>.log(<span class="string">"result = "</span>+result);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span>(<span class="params">o</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"我是"</span>+o.name+<span class="string">",今年我"</span>+o.age+<span class="string">"岁了，"</span>+<span class="string">"我是一个"</span>+o.gender+<span class="string">"住在"</span>+o.address)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  name:<span class="string">"花花"</span>,</span><br><span class="line">  age : <span class="number">18</span>,</span><br><span class="line">  gender:<span class="string">"男"</span>,</span><br><span class="line">  address:<span class="string">"花果山"</span></span><br><span class="line">&#125; </span><br><span class="line">result = sayHello(obj);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mianji</span>(<span class="params">r</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">3.14</span> * r *r ;</span><br><span class="line">  &#125;</span><br><span class="line">  result = mianji(<span class="number">10</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"result = "</span>+result);</span><br></pre></td></tr></table></figure>
+<p>   mianji()</p>
+<p>   –调用函数</p>
+<p>   –相当于使用返回值</p>
+<p>   mianji</p>
+<p>​    –调用对象</p>
+<p>​     —相当于直接使用函数对象</p>
+<p>​    其中fun(mianji());相当于把函数的返回值作为参数</p>
+<p>​    如果时fun(mianji);就相当于fun函数于mianji函数一样</p>
+<p>八、立即执行函数</p>
+<p>​      —-函数定义完，立即被调用，这种函数叫做立即执行函数</p>
+<p>​           立即执行函数往往只会执行一次</p>
+<p>  (function(a,b){<br>          console.log(“a = “+a);<br>          console.log(“b = “+b);<br>         })(4,9);</p>
+<p><img src="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200225192830953.png" alt="image-20200225192830953"></p>
+<p>九、枚举对象中的属性</p>
+<p>​     使用for….in语句</p>
+<p>   语法：</p>
+<p>​        for(var 变量 in 对象){</p>
+<p>​       }</p>
+<p> for      in语句，对象中有几个属性，循环就会执行几次</p>
+<p>每次执行时，会将对象中的一个属性的名字赋值给变量</p>
+<p>   var obj = {<br>            name:”花花”,<br>            age : 18,<br>            gender:”男”,<br>            address:”花果山”,<br>            sayName:function(){<br>              console.log(obj.name);<br>            }<br>          };<br>          obj.sayName();<br>          for (var n in obj ) {<br>            console.log(n);//返回属性名</p>
+<p>​           console.log(obj[n]);//返回属性值</p>
+<p>​          }</p>
+<p>十、作用域</p>
+<p>​              -指一个变量作用的范围 </p>
+<p>​              -JS中有两种作用域：</p>
+<p>​                         1、全局作用域</p>
+<p>​                                          -直接编写在script标签中的JS码，都在全局作用域</p>
+<p>​                                          -全局作用域在页面打开创建，在页面关闭销毁</p>
+<p>​                                          -在全局作用域中有一个全局对象window（代表一个浏览器唇口，由浏览器创建，我们可以直接使用</p>
+<p>​                                        -在全局作用域中</p>
+<p>​                                               创建的变量会作为Windows对象的属性保存</p>
+<p>​                                               创建的函数都会作为window对象的方法保存    </p>
+<p>​                          2、函数作用域</p>
+<p>​                                -调用函数时创建函数作用域，函数执行完毕以后，函数作用域销毁</p>
+<p>​                                -每调用一次函数就会创建一个新的函数作用域，他们之间是相互独立的</p>
+<p>​                               -在函数作用域中可以访问到全局的变量，在全局作用域中无法访问的到函数作用域变量</p>
+<p>​                              -当在函数作用域操作一个变量时，他会现在自身作用域中寻找，如果有就直接使用</p>
+<p>​                              如果没有则向上一级作用域中寻找，直到找到全局作用域</p>
+<p>​                             如果全局作用域中依然没有找到，则会报错</p>
+<p>​                              在函数作用域中要使用全局变量，可以使用window来进行</p>
+<p>​                              —在函数作用域中也有生命提前的特性</p>
+<p>​                                  使用var关键字声明变量，会在函数中所有的代码执行之前被声明</p>
+<p>​            注：在函数中，不使用var声明的变量都是全局变量</p>
+<p>十一、变量的声明提前</p>
+<p>​                —使用var关键字声明的变量，会在所有的代码执行前被声明（但不会赋值）</p>
+<p>​                           但是如果声明变量时不适合var关键字，则变量不会被声明提前</p>
+<p>​            函数的声明提前</p>
+<p>​                —使用函数声明形式创建的函数function（）{}</p>
+<p>​                     它会在虽有的diamagnetic执行之前就被创建，所以我们可以在函数声明前来调用函数</p>
+<p>​                    使用函数表达式创建的函数，不会被声明提前，所以不能在声明前调用</p>
+<p>​           注：函数声明在变量声明之后</p>
+<p>十二、this</p>
+<p><img src="/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/image-20200226000238642.png" alt="image-20200226000238642"></p>
+<p>​        </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"全局"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  name:<span class="string">"花花"</span>,</span><br><span class="line">  sayName:fun</span><br><span class="line">&#125;; </span><br><span class="line"> <span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">  name:<span class="string">"猪八戒"</span>,</span><br><span class="line">  sayName:fun</span><br><span class="line">&#125;; </span><br><span class="line">obj.sayName();</span><br><span class="line">obj2.sayName();</span><br></pre></td></tr></table></figure>
+<p>如果只是写name,而不是this.name。最终显示的是“全局”而不是对应的对象的名字。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/24/JS-%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-  	<time datetime="2020-02-23T04:44:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/02/26/JS-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS_创建对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/23/%E8%AF%AD%E5%8F%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">语句</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/%E8%AF%AD%E5%8F%A5/">语句</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/22/%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-  	<time datetime="2020-02-22T07:28:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/22/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/21/Js-%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-02-21T15:50:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/21/Js-%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2%E7%B1%BB%E5%9E%8B/">Js_强制转换类型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/21/Js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-02-21T12:43:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/21/Js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Js基本语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-02-19T12:32:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/19/%E6%96%B0UI-%E6%96%B0%E5%A2%9EUI%E6%A0%B7%E5%BC%8F/">新UI-新增UI样式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/19/%E6%96%B0UI-%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%96%B0%E5%A2%9E%E6%A0%B7%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-02-19T06:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/19/%E6%96%B0UI-%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%96%B0%E5%A2%9E%E6%A0%B7%E5%BC%8F/">新UI-盒模型新增样式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/%E6%96%B0%E7%9A%84UI%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2020-02-18T07:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/%E6%96%B0%E7%9A%84UI%E6%96%B9%E6%A1%88/">文本新增样式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93-%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87/" class="archive-article-date">
-  	<time datetime="2020-02-17T16:32:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93-%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87/">自定义字体&amp;字体图标</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/02/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/02/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +516,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
